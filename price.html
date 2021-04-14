@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <title>CalculatePrice</title>
+
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="row mt-5">
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="sarrasin" class="mb-2">Galettes au sarrasin 9€</label>
+                <select class="form-select mb-4" id="sarrasin">
+                    <option value="Choisir">Choisir</option>
+                    <option value="J.O.F">J.O.F</option>
+                    <option value="Complete">Complete</option>
+                    <option value="Alsacienne">Alsacienne</option>
+                    <option value="Française">Française</option>
+                    <option value="Suédoise">Suédoise</option>
+                    <option value="Tel-Aviv">Tel-Aviv</option>
+                    <option value="Auvergnate">Auvergnate</option>
+                    <option value="Orientale">Orientale</option>
+                    <option value="Parisienne">Parisienne</option>
+                    <option value="Italienne">Italienne</option>
+                    <option value="Américaine">Américaine</option>
+                    <option value="Cannetanne">Cannetanne</option>
+                    <option value="Espagnole">Espagnole</option>
+                    <option value="Fondante">Fondante</option>
+                </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="sarrasin_quantity" class="mb-2">Quantité</label>
+                <select class="form-select mb-4" id="sarrasin_quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label for="extra" class="mb-2">Extras 3€</label>
+                <select class="form-select mb-4" id="extra">
+                    <option value="Choisir">Choisir</option>
+                    <option value="Frites">Frites</option>
+                    <option value="Salade">Salade</option>
+                    <option value="Ratatouille">Ratatouille</option>
+                    <option value="Potatoes">Potatoes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label for="sweet_crepe" class="mb-2">Crêpes sucrées 4€</label>
+                <select class="form-select mb-4" id="sweet_crepe">
+                    <option value="Choisir">Choisir</option>
+                    <option value="Sucre">Sucre</option>
+                    <option value="Nutella">Nutella</option>
+                    <option value="Jus de citron pressé">Jus de citron pressé</option>
+                    <option value="Crème de marron">Crème de marron</option>
+                    <option value="Chocolat noir">Chocolat noir</option>
+                    <option value="Miel">Miel</option>
+                    <option value="Caramel beurre salé maison">Caramel beurre salé maison</option>
+                    <option value="Confiture de fraises">Confiture de fraises</option>
+                    <option value="Confiture d'abricots">Confiture d'abricots</option>
+                </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="sweet_quantity" class="mb-2">Quantité</label>
+                <select class="form-select mb-4" id="sweet_quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label for="compound_crepe" class="mb-2">Crêpes composées 7€</label>
+                <select class="form-select mb-4" id="compound_crepe">
+                    <option value="Choisir">Choisir</option>
+                    <option value="Tatin">Tatin</option>
+                    <option value="Antillaise">Antillaise</option>
+                    <option value="Banania">Banania</option>
+                    <option value="Caranut">Caranut</option>
+                    <option value="Bretonne">Bretonne</option>
+                    <option value="Winnie">Winnie</option>
+                </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="compound_quantity" class="mb-2">Quantité</label>
+                <select class="form-select mb-4" id="compound_quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label for="drinks" class="mb-2">Boissons fraiches</label>
+                <select class="form-select mb-4" id="drinks">
+                    <option value="Choisir">Choisir</option>
+                    <option value="Bouteille de Cidre BRUT - 14€">Bouteille de Cidre BRUT - 14€</option>
+                    <option value="Bouteille de Cidre DOUX - 14€">Bouteille de Cidre DOUX - 14€</option>
+                    <option value="Cidre BRUT - 7€">Cidre BRUT - 7€</option>
+                    <option value="Cidre DOUX - 7€">Cidre DOUX - 7€</option>
+                    <option value="Cristalline 50cl - 2€">Cristalline 50cl - 2€</option>
+                    <option value="San Pellegrino 50cl - 3€">San Pellegrino 50cl - 3€</option>
+                    <option value="Soda 33cl - 3€">Soda 33cl - 3€</option>
+                    <option value="Heineken - 3€">Heineken - 3€</option>
+                </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <label for="drinks_quantity" class="mb-2">Quantité</label>
+                <select class="form-select mb-4" id="drinks_quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="total">Prix: 0€</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let select = document.querySelectorAll("select");
+
+        // console.log(select)
+
+        select.forEach(function (e) {
+            
+            e.addEventListener('change', () => {
+
+                produit1 = select[0].options[select[0].selectedIndex].value
+                produit2 = select[2].options[select[2].selectedIndex].value
+                produit3 = select[3].options[select[3].selectedIndex].value
+                produit4 = select[5].options[select[5].selectedIndex].value
+                produit5 = select[7].options[select[7].selectedIndex].value
+
+                p1 = 0
+                p2 = 0
+                p3 = 0
+                p4 = 0
+                tab = [14, 14, 7, 7, 2, 3, 3, 3]
+                p5 = 0
+
+                if (produit1 != 'Choisir') {
+                    var p1 = select[1].value * 9
+                }
+
+                if (produit2 != 'Choisir') {
+                    var p2 = 3
+                }
+
+                if (produit3 != 'Choisir') {
+                    var p3 = select[4].value * 4
+                }
+
+                if (produit4 != 'Choisir') {
+                    var p4 = select[6].value * 7
+                }
+
+                if (produit5 != 'Choisir') {
+                    
+                    tab.forEach(function (e) {
+                        console.log(e * e)
+                    })
+            
+                    //    var p5 = tab[0] * select[8].value
+                             
+                }
+
+                let result = p1 + p2 + p3 + p4
+                total.innerText = 'Prix: ' + result + '€'
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
