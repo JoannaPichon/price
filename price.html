@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <title>CalculatePrice</title>
+    <title>Price</title>
 
 </head>
 
@@ -262,8 +262,6 @@
 
         let select = document.querySelectorAll("select");
 
-        // console.log(select)
-
         select.forEach(function (e) {
             
             e.addEventListener('change', () => {
@@ -278,7 +276,7 @@
                 p2 = 0
                 p3 = 0
                 p4 = 0
-                tab = [14, 14, 7, 7, 2, 3, 3, 3]
+                tab = [0, 14, 14, 7, 7, 2, 3, 3, 3]
                 p5 = 0
 
                 if (produit1 != 'Choisir') {
@@ -298,16 +296,14 @@
                 }
 
                 if (produit5 != 'Choisir') {
+
+                    // select[8].options[select[8].selectedIndex].value
                     
-                    tab.forEach(function (e) {
-                        console.log(e * e)
-                    })
-            
-                    //    var p5 = tab[0] * select[8].value
-                             
+                   var p5 = tab[select[7].selectedIndex] * select[8].value
+                
                 }
 
-                let result = p1 + p2 + p3 + p4
+                let result = p1 + p2 + p3 + p4 + p5
                 total.innerText = 'Prix: ' + result + '€'
 
             })

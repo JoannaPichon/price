@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Refactoriser au maximum le code Js et si possible utilisé jQuery -->
+<!-- J'entend par là de minimisé au maximum l'utilisation de sélecteur, si il y a trop de section on devra systématiquement cité toute les classes ? -->
+<!-- Est-il possible de lié les prix avec leurs quantité ? -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <title>CalculatePrice</title>
+    <style>
+        body {
+            margin-top: 100px;
+        }
+
+        select {
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label for="fixed">Prix fixe <strong>4€</strong></label>
+                <select class="form-select" id="fixed">
+                    <option value="0">Open this select menu</option>
+                    <option value="4">4€</option>
+                    <option value="4">4€</option>
+                    <option value="4">4€</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <label for="quantity">Quantité</label>
+                <select class="form-select" id="quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label for="random">Prix différent</label>
+                <select class="form-select" id="random">
+                    <option value="0">Open this select menu</option>
+                    <option value="1">1€</option>
+                    <option value="2">2€</option>
+                    <option value="3">3€</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <label for="quantTwo">Quantité</label>
+                <select class="form-select" id="quantTwo">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- trouver une solution en Js pour afficher ce titre (Prix: 0€) si aucun prix n'a était séléctionner -->
+                <h2 id="total">Prix: 0€</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var fixed = document.getElementById('fixed');
+        var quantity = document.getElementById('quantity');
+        var random = document.getElementById('random');
+        var quantTwo = document.getElementById('quantTwo');
+        var total = document.getElementById('total');
+
+        fixed.addEventListener('change', calculatePrice);
+        quantity.addEventListener('change', calculatePrice);
+        random.addEventListener('change', calculatePrice);
+        quantTwo.addEventListener('change', calculatePrice);
+
+        function calculatePrice() {
+            let select = fixed.options[fixed.selectedIndex].value * quantity.options[quantity.selectedIndex].value;
+            let selectTwo = random.options[random.selectedIndex].value * quantTwo.options[quantTwo.selectedIndex].value;
+            let result = select + selectTwo;
+            total.innerHTML = 'Prix: ' + result + '€';
+        }
+
+    </script>
+</body>
+
+</html>

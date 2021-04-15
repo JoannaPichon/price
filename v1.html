@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>CalculatePrice</title>
+    <style>
+      body {
+        margin-top: 100px;
+      }
+
+      select {
+        margin-bottom: 20px;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <label for="fixed">Fixed Price <strong>4$</strong></label>
+          <select class="form-select" onChange="calculatePrice()" id="fixed">
+            <option value="0">Open this select menu</option>
+            <option value="4">fixed</option>
+            <option value="4">fixed</option>
+            <option value="4">fixed</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <label for="firstquantity">Quantity</label>
+          <select
+            class="form-select"
+            onChange="calculatePrice()"
+            id="firstquantity"
+          >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <label for="random">Random Price</label>
+          <select class="form-select" onChange="calculatePrice()" id="random">
+            <option value="0">Open this select menu</option>
+            <option value="1">1$</option>
+            <option value="2">2$</option>
+            <option value="3">3$</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <label for="twoquantity">Quantity</label>
+          <select
+            class="form-select"
+            onChange="calculatePrice()"
+            id="twoquantity"
+          >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Price:</h2>
+          <input class="form-control" type="text" id="Price" value="0$" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function calculatePrice(myform) {
+        //Get selected data
+        var elt = document.getElementById("fixed");
+        var fixed = elt.options[elt.selectedIndex].value;
+
+        var elt = document.getElementById("firstquantity");
+        var firstquantity = elt.options[elt.selectedIndex].value;
+
+        var elt = document.getElementById("random");
+        var random = elt.options[elt.selectedIndex].value;
+
+        var elt = document.getElementById("twoquantity");
+        var twoquantity = elt.options[elt.selectedIndex].value;
+
+        //convert data to integers
+        fixed = parseInt(fixed);
+        firstquantity = parseInt(firstquantity);
+        random = parseInt(random);
+        twoquantity = parseInt(twoquantity);
+
+        //calculate total value
+        var calc = fixed * firstquantity;
+        var cal = random * twoquantity;
+        var total = calc + cal;
+
+        //print value to  PicExtPrice
+        document.getElementById("Price").value = total + "$";
+      }
+    </script>
+  </body>
+</html>
